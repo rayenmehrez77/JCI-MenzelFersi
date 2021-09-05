@@ -1,7 +1,15 @@
+import { Route, Switch } from "react-router";
+import { Navbar } from "./components";
+import { HomePage, BlogPage } from "./Pages";
+
 function App() {
   return (
     <>
-      <h1>Let's build jci menzel fersi community</h1>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/blog" component={BlogPage} />
+      </Switch>
     </>
   );
 }
