@@ -1,9 +1,10 @@
 import React from "react";
+import { TopHeader } from "../components";
 
 const BlogPage = () => {
   return (
-    <div>
-      <h1>Blog page</h1>
+    <div className="mt-20	py-2">
+      <TopHeader />
     </div>
   );
 };

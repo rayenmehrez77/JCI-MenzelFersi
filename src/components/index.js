@@ -1,3 +1,16 @@
 export { default as Navbar } from "./Navbar";
 export { default as Banner } from "./Banner";
 export { default as About } from "./About";
+export { default as Program } from "./Program";
+export { default as Event } from "./Event";
+export { default as Actions } from "./Actions";
+export { default as TopHeader } from "./TopHeader";
+export { default as EventCounter } from "./EventCounter";
+export { default as Aside } from "./Aside";
+export { default as Programs } from "./Programs";
+export { default as Team } from "./Team";
+export { default as FrequentQuestions } from "./FrequentQuestions";
+export { default as Question } from "./Question";
+export { default as Sponsor } from "./Sponsor";
+export { default as Footer } from "./Footer";
+export { default as Logo } from "./Logo";

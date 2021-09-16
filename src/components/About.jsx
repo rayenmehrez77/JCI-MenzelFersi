@@ -1,13 +1,22 @@
+import img from "../images/jciframework.jpg";
 import React from "react";
 
 const About = () => {
   return (
-    <div id="#about" className="p-8">
-      <h1 className="text-2xl text-center font-medium">About Us</h1>
-      <p className="font-medium mt-4 text-center w-1/2 mx-auto text-xl">
-        We are young active citizens from Menzel Fersi. Living, communicating,
-        taking action and creating impact in our communities
-      </p>
+    <div
+      id="#propos"
+      className="p-16 font-neuton flex flex-col items-center bg-white "
+    >
+      <div className="flex flex-col items-center">
+        <h1 className="text-4xl text-center tracking-wider	font-bold text-gray-800	uppercase font-josefin ">
+          Qui sommes-nous{" "}
+        </h1>
+        <p className="font-bold	max-w-2xl text-center mt-6 tracking-wider text-lg text-gray-800 ">
+          Nous sommes de jeunes citoyens actifs de Menzel Fersi. Vivre,
+          communiquer, agir et créer un impact dans nos communautés.
+        </p>
+      </div>
+      <img src={img} alt="" className="w-3/4" />
     </div>
   );
 };
