@@ -5,6 +5,12 @@ import { AiFillFacebook } from "react-icons/ai";
 import { RiInstagramLine } from "react-icons/ri";
 
 const Footer = () => {
+  const myRef = React.useRef();
+
+  const focustxt = () => {
+    return myRef.current.focus();
+  };
+
   return (
     <div className="bg-gray-800 p-16">
       <div className="grid grid-cols-3">
@@ -32,9 +38,6 @@ const Footer = () => {
           <li>
             <a href="#sponsors">Sponsors</a>
           </li>
-          <li>
-            <Link to="#contact">Contact</Link>
-          </li>
         </ul>
         <div className="w-96">
           <h1 className="mb-4 font-semibold text-white uppercase">
@@ -46,6 +49,8 @@ const Footer = () => {
           </p>
           <form className="box-border">
             <input
+              ref={myRef}
+              onClick={focustxt}
               type="text"
               placeholder="Enter your email"
               className="py-2 my-4 pl-2 w-full pr-16 ring-2 outline-none text-white font-semibold focus:ring-blue-600 ring-blue-400 rounded"
@@ -53,7 +58,7 @@ const Footer = () => {
             <div className="rounded-md shadow">
               <a
                 href="/"
-                className="w-full flex h-full px-8 justify-center text-center items-center py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
+                className="w-full flex h-full px-8 justify-center text-center items-center py-3 border border-transparent text-base font-medium rounded-md text-white gradient md:py-4 md:text-lg md:px-10"
               >
                 Subscribe
               </a>

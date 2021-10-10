@@ -1,9 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
-@layer components {
-  .gradient {
-    @apply bg-gradient-to-r from-yellow-500 to-yellow-300;
-  }
-} */
+
+.top-line {
+  height: 10px;
+  width: 100%;
+}
+
+.gradient {
+  background: linear-gradient(to right, rgb(0, 176, 207), rgb(3, 64, 179));
+}
+
+.hero-bg {
+  position: relative;
+}
+
+.hero-bg img {
+  width: 93%;
+}
+
+.hero-bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+}

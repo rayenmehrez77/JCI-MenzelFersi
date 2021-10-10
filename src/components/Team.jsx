@@ -4,10 +4,11 @@ import Member from "./Member";
 import kacem from "../images/kacem.jpg";
 import faten from "../images/faten.jpg";
 import malek from "../images/malek.jpg";
+import hadil from "../images/hadil.jpg";
 
 const Team = () => {
   return (
-    <div className="h-screen pt-16 mb-32">
+    <div className="h-screen pt-16 mb-32" id="team">
       <h1 className="text-4xl text-center tracking-wider font-bold text-gray-800 uppercase font-josefin">
         NOTRE EQUIPE
       </h1>
@@ -37,7 +38,7 @@ const Team = () => {
         <Member
           name="Hadil Mabrouk"
           role="Vice President relations Extérieurs"
-          img={img}
+          img={hadil}
           fbLink="https://www.facebook.com/hedil4829"
           InstaLink="https://www.instagram.com/_h.e.d.i.l/"
         />

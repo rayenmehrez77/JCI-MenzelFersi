@@ -3,7 +3,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      neuton: ["Neuton", "sans-serif"],
+      domine: ["Domine", "sans-serif"],
     },
   },
   variants: {

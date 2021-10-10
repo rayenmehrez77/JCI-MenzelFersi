@@ -1,9 +1,10 @@
 import React from "react";
 import { Question } from "../components";
+import img from "../images/meteor.svg";
 
 const FrequentQuestions = () => {
   return (
-    <div className="py-20 mt-8 bg-gray-50">
+    <div className="bg-gray-50 py-20">
       <h1 className="text-4xl text-center tracking-wider font-bold text-gray-800	uppercase font-josefin">
         QUESTIONS FRÉQUENTES
       </h1>

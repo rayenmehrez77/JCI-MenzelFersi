@@ -2,7 +2,7 @@ import React from "react";
 
 const Sponsor = () => {
   return (
-    <div className="py-16 flex flex-col items-center bg-blue-600 ">
+    <div className="py-16 flex flex-col items-center gradient " id="sponsor">
       <h1 className="text-4xl text-center tracking-wider font-bold text-white	uppercase font-josefin">
         Devenir Parrain
       </h1>

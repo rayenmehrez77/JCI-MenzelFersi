@@ -3,25 +3,31 @@ import {
   About,
   Footer,
   FrequentQuestions,
-  Program,
   Sponsor,
   Team,
+  Dropdown,
 } from "../components";
 import EventCounter from "../components/EventCounter";
 import teamImg from "../images/bannerImg.jpg";
 
-const Homepage = () => {
+const Homepage = ({ clicked }) => {
   return (
     <div className="font-neuton">
-      <img
-        src={teamImg}
-        alt="banner img"
-        className="h-screen w-full object-cover mt-16"
-      />
-      <div className="bg-repeat w-full h-full text-primary-100 heropattern-linesinmotion-blue-50">
+      {clicked && <Dropdown />}
+      <div className="hero-bg">
+        <img
+          src={teamImg}
+          alt="banner img"
+          className="h-screen w-full object-cover mt-8"
+        />
+        <div class="overlay">
+          Multi-line <br />
+          text
+        </div>
+      </div>
+      <div className="bg-repeat w-full h-full text-primary-100 ">
         <About />
         <EventCounter />
-        <Program />
         <Team />
         <FrequentQuestions />
         <Sponsor />
@@ -32,3 +38,5 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
+// heropattern-linesinmotion-blue-50
