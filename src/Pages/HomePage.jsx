@@ -20,10 +20,6 @@ const Homepage = ({ clicked }) => {
           alt="banner img"
           className="h-screen w-full object-cover mt-8"
         />
-        <div class="overlay">
-          Multi-line <br />
-          text
-        </div>
       </div>
       <div className="bg-repeat w-full h-full text-primary-100 ">
         <About />
@@ -38,5 +34,3 @@ const Homepage = ({ clicked }) => {
 };
 
 export default Homepage;
-
-// heropattern-linesinmotion-blue-50
