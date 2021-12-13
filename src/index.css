@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .top-line {
-  height: 10px;
+  height: 6px;
   width: 100%;
 }
 
@@ -11,12 +11,16 @@
   background: linear-gradient(to right, rgb(0, 176, 207), rgb(3, 64, 179));
 }
 
+.gradient-reverse {
+  background: linear-gradient(to right, rgb(3, 64, 179), rgb(0, 176, 207));
+}
+
 .hero-bg {
   position: relative;
 }
 
 .hero-bg img {
-  width: 93%;
+  width: 100%;
 }
 
 .hero-bg .overlay {

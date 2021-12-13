@@ -2,7 +2,6 @@ import React from "react";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { MdVisibility } from "react-icons/md";
 import { Card } from "../components";
-import teamImg from "../images/team.jpg";
 
 const About = () => {
   return (
@@ -21,11 +20,6 @@ const About = () => {
         />
       </div>
       <div className="flex items-center space-x-16 justify-center mt-16 px-32">
-        <img
-          src={teamImg}
-          alt="banner img"
-          className="object-cover w-1/2 h-80 rounded-md"
-        />
         <div className="font-bold w-1/2">
           <h1 className="mb-4 text-2xl">JCI MENZEL FERSI !</h1>
           <div className="w-32 h-1  bg-yellow-500 mb-2"></div>

@@ -4,11 +4,11 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 const Member = ({ img, name, role, InstaLink, fbLink, LinkedInLink }) => {
   return (
-    <div className="w-80  hover:transform hover:scale-y-75 cursor-pointer py-2 rounded-md shadow-lg bg-white border-b-4 border-blue-500">
+    <div className="">
       <img
         src={img}
         alt="name"
-        className="w-full rounded-t-lg h-56 object-cover"
+        className="w-30 rounded-t-lg object-cover h-46 "
       />
       <div className="flex items-center mx-4 justify-between mt-4 py-2">
         <div>

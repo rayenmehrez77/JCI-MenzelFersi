@@ -1,13 +1,13 @@
 import { Route, Switch } from "react-router";
-import { Navbar } from "./components";
-import { HomePage, BlogPage } from "./Pages";
+import { Navbar, NavbarReveal } from "./components";
+import { HomePage, EventsPage } from "./Pages";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { useEffect, useState } from "react";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
-  const [clicked, setClicked] = useState(false);
+  const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -15,6 +15,14 @@ function App() {
         setShowButton(true);
       } else {
         setShowButton(false);
+      }
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 200) {
+        setShowNav(true);
+      } else {
+        setShowNav(false);
       }
     });
   }, []);
@@ -30,18 +38,16 @@ function App() {
   return (
     <div className="relative font-domine">
       <div className="gradient top-line"></div>
-      <Navbar clicked={clicked} setClicked={setClicked} />
+      {showNav ? <NavbarReveal /> : <Navbar />}
       <Switch>
-        <Route
-          exact
-          path="/"
-          component={() => (
-            <HomePage clicked={clicked} setClicked={setClicked} />
-          )}
-        />
-        <Route exact path="/blog" component={BlogPage} />
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/events" component={EventsPage} />
       </Switch>
-      <MessengerCustomerChat pageId="100183858854793" appId="947531829136147" />
+      <MessengerCustomerChat
+        pageId="100183858854793"
+        appId="947531829136147"
+        className="fixed bottom-12 right-6"
+      />
       {showButton && (
         <button
           onClick={scrollToTop}

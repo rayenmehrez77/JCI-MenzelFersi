@@ -1,16 +1,19 @@
 import React from "react";
-import { Aside } from "../components";
-import Programs from "./Programs";
+import { Title } from ".";
+import img from "../images/programme.png";
 
 const Program = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <h1 className="text-4xl text-center tracking-wider font-bold text-gray-800	uppercase font-josefin">
-        programme
-      </h1>
-      <div className="max-w-6xl mx-auto mt-16 flex">
-        <Aside />
-        <Programs />
+    <div className="bg-gray-100 pt-12 pb-12">
+      <Title
+        title="Programme"
+        des1="Projet de programme événementiel"
+        des2="Pour l'année 2022"
+      />
+      <div className="relative sm:w-3/5 w-4/5 mx-auto ">
+        <img src={img} alt="programme" className="mt-8 w-full h-full" />
+        <div className="absolute top-5 -right-2 lg:top-6 inline-flex h-3 w-3 gradient rounded-full bg-sky-400 opacity-75 animate-ping"></div>
+        <div className="absolute top-5 -right-2 lg:top-6 inline-flex h-3 w-3 gradient rounded-full bg-sky-400 opacity-75"></div>
       </div>
     </div>
   );
