@@ -1,76 +1,85 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import img from "../images/logo.png";
 import { FiMenu } from "react-icons/fi";
+import { Link as LinkScroll } from "react-scroll";
 
 const Navbar = ({ clicked, setClicked }) => {
   return (
-    <header
-      className="flex items-center justify-between py-4 w-full  bg-white"
-      id="acceuil"
-    >
+    <header className="flex items-center justify-between py-3 px-2 lg:px-6 w-full">
       <Link to="/" className="flex items-center cursor-pointer">
-        <img src={img} alt="logo" className="h-18 object-cover" />
+        <img
+          src={img}
+          alt="logo"
+          className="h-18 w-46 object-center object-cover"
+        />
       </Link>
       <FiMenu
         className="w-8 h-8 lg:hidden flex object-cover cursor-pointer"
         onClick={() => setClicked(!clicked)}
       />
       <div className="lg:flex items-center hidden">
-        <ul className="lg:flex items-center space-x-10 font-bold text-gray-600 text-md hidden">
+        <ul className="lg:flex items-center space-x-12 font-semibold text-gray-600 text-md hidden">
           <li>
-            <Link
-              to="acceuil"
-              spy={true}
+            <LinkScroll
+              to=""
+              activeClass="active"
               smooth={true}
               offset={50}
-              duration={500}
+              duration={50}
               className="cursor-pointer"
             >
               ACCUEIL
-            </Link>
+            </LinkScroll>
           </li>
           <li>
-            <Link
-              to="about"
-              spy={true}
+            <LinkScroll
+              to="program"
               smooth={true}
               offset={50}
               duration={500}
               className="cursor-pointer"
             >
               PROGRAMME
-            </Link>
+            </LinkScroll>
           </li>
           <li>
-            <Link
+            <LinkScroll
               to="event"
-              spy={true}
               smooth={true}
               offset={50}
               duration={500}
               className="cursor-pointer"
             >
               EQUIPE
-            </Link>
+            </LinkScroll>
           </li>
           <li>
-            <Link
+            <LinkScroll
               to="team"
-              spy={true}
               smooth={true}
               offset={50}
               duration={500}
               className="cursor-pointer"
             >
               FAQ
-            </Link>
+            </LinkScroll>
+          </li>
+          <li>
+            <LinkScroll
+              to="event"
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="cursor-pointer"
+            >
+              Newsletter
+            </LinkScroll>
           </li>
         </ul>
-        <a
-          href="#"
-          className="ml-8 rounded-md py-1 px-8 bg-gradient-to-r transition-all delay-75 bg-blue-500 text-white font-bold"
-        >
+      </div>
+      <div className="lg:inline-block hidden">
+        <a href="#" className="btn btn-primary">
           Contact
         </a>
       </div>

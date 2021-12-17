@@ -1,5 +1,5 @@
 import { Route, Switch } from "react-router";
-import { Navbar, NavbarReveal } from "./components";
+import { Footer, Navbar, NavbarReveal } from "./components";
 import { HomePage, EventsPage } from "./Pages";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import { MdKeyboardArrowUp } from "react-icons/md";
@@ -36,7 +36,7 @@ function App() {
   };
 
   return (
-    <div className="relative font-domine">
+    <div className="relative font-signika">
       <div className="gradient top-line"></div>
       {showNav ? <NavbarReveal /> : <Navbar />}
       <Switch>

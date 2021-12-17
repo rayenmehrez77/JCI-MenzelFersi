@@ -1,48 +1,38 @@
 import React from "react";
-import revoir from "../images/revoirImage.png";
-import analyse from "../images/analyseImage.png";
-import developer from "../images/revoirImage.png";
-import executer from "../images/executerImage.png";
+import revoir from "../images/revoir.svg";
+import analyse from "../images/space.svg";
+import developer from "../images/thought.svg";
+import executer from "../images/solution.svg";
+import Action from "./Action";
+
+const steps = [
+  {
+    id: 1,
+    title: "Revoir",
+    desc: "Examiner la communauté Besoins",
+    img: revoir,
+  },
+  {
+    id: 2,
+    title: "ANALYSER",
+    desc: "Surveiller et évaluer Résultats",
+    img: developer,
+  },
+  {
+    id: 3,
+    title: "DÉVELOPPER",
+    desc: "Formuler Durable Solutions",
+    img: executer,
+  },
+  { id: 4, title: "EXÉCUTER", desc: "Prendre des mesures", img: analyse },
+];
 
 const Actions = () => {
   return (
-    <div className="gradient flex py-8 justify-center text-center">
-      <div className="w-96">
-        <img src={revoir} alt="revoir" className="mb-3 mx-auto w-26 h-28" />
-        <h1 className="font-bold uppercase tracking-wider text-2xl text-white">
-          Revoir
-        </h1>
-        <p className="font-semibold mt-2 text-white tracking-wide">
-          Examiner la communauté Besoins
-        </p>
-      </div>
-      <div className="w-96">
-        <img src={analyse} alt="revoir" className="mb-3 mx-auto w-26 h-28" />
-        <h1 className="font-bold uppercase tracking-wider text-2xl text-white">
-          ANALYSER
-        </h1>
-        <p className="font-semibold mt-2 text-white tracking-wide">
-          Surveiller et évaluer Résultats
-        </p>
-      </div>
-      <div className="w-96">
-        <img src={developer} alt="revoir" className="mb-3 mx-auto w-26 h-28" />
-        <h1 className="font-bold uppercase tracking-wider text-2xl text-white">
-          DÉVELOPPER
-        </h1>
-        <p className="font-semibold mt-2 text-white tracking-wide">
-          Formuler Durable Solutions
-        </p>
-      </div>
-      <div className="w-96">
-        <img src={executer} alt="revoir" className="mb-3 mx-auto w-26 h-28" />
-        <h1 className="font-bold uppercase tracking-wider text-2xl text-white">
-          EXÉCUTER
-        </h1>
-        <p className="font-semibold mt-2 text-white tracking-wide">
-          Prendre des mesures
-        </p>
-      </div>
+    <div className="gradient grid lg:grid-cols-2 grid-cols-1 gap-8 px-20 py-10 lg:p-32 justify-center">
+      {steps.map((step) => (
+        <Action key={step.id} {...step} />
+      ))}
     </div>
   );
 };

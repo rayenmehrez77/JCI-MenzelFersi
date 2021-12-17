@@ -1,13 +1,14 @@
 import React from "react";
 import { FiMenu } from "react-icons/fi";
 import Fade from "react-reveal/Fade";
+import { Link as LinkScroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import img from "../images/logo.png";
 
 const NavbarReveal = () => {
   return (
     <Fade>
-      <div className="bg-white h-18 py-2 w-full fixed top-0 left-0 px-4 shadow-md z-50 flex items-center justify-between">
+      <div className="lg:px-6 h-18 py-3 w-full fixed top-0 left-0 px-2 shadow-md z-50 flex items-center justify-between bg-white">
         <Link to="/" className="flex items-center cursor-pointer">
           <img src={img} alt="logo" className="w-46 object-cover" />
         </Link>
@@ -15,45 +16,41 @@ const NavbarReveal = () => {
         <div className="lg:flex items-center hidden">
           <ul className="lg:flex items-center space-x-10 font-bold text-gray-600 text-md hidden">
             <li>
-              <Link
+              <LinkScroll
                 to="acceuil"
-                spy={true}
                 smooth={true}
                 offset={50}
                 duration={500}
                 className="cursor-pointer"
               >
                 ACCUEIL
-              </Link>
+              </LinkScroll>
             </li>
             <li>
-              <Link
-                to="about"
-                spy={true}
+              <LinkScroll
+                to="program"
                 smooth={true}
                 offset={50}
                 duration={500}
                 className="cursor-pointer"
               >
                 PROGRAMME
-              </Link>
+              </LinkScroll>
             </li>
             <li>
-              <Link
-                to="event"
-                spy={true}
+              <LinkScroll
+                to="team"
                 smooth={true}
                 offset={50}
                 duration={500}
                 className="cursor-pointer"
               >
                 EQUIPE
-              </Link>
+              </LinkScroll>
             </li>
             <li>
               <Link
-                to="team"
-                spy={true}
+                to="faq"
                 smooth={true}
                 offset={50}
                 duration={500}
@@ -62,11 +59,21 @@ const NavbarReveal = () => {
                 FAQ
               </Link>
             </li>
+            <li>
+              <LinkScroll
+                to="newsletter"
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Newsletter
+              </LinkScroll>
+            </li>
           </ul>
-          <a
-            href="#"
-            className="ml-8 rounded-md py-1 px-8 bg-gradient-to-r transition-all delay-75 bg-blue-500 text-white font-bold"
-          >
+        </div>
+        <div className="lg:inline-block hidden">
+          <a href="#" className="btn btn-primary">
             Contact
           </a>
         </div>

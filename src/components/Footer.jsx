@@ -1,87 +1,56 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Logo } from "../components";
+import Logo from "../images/logo.png";
 import { AiFillFacebook } from "react-icons/ai";
 import { RiInstagramLine } from "react-icons/ri";
 
 const Footer = () => {
-  const myRef = React.useRef();
-
-  const focustxt = () => {
-    return myRef.current.focus();
-  };
-
   return (
-    <div className="bg-gray-800 p-16">
-      <div className="grid grid-cols-3">
-        <div>
-          <Logo isWhite />
-          <p className="w-56 mt-4 font-semibold text-white">
-            Notre Vision est d’être le principal réseau mondial de jeunes
-            citoyens actifs.
-          </p>
-        </div>
-        <ul className="space-y-6 font-semibold text-white">
-          <h1 className="text-xl text-white">Quik Links</h1>
-          <li>
-            <a href="#nav-acceuil">Acceuil</a>
-          </li>
-          <li>
-            <a href="#propos">À Propos</a>
-          </li>
-          <li>
-            <a href="#programme">Programme</a>
-          </li>
-          <li>
-            <a href="#team">Equipe</a>
-          </li>
-          <li>
-            <a href="#sponsors">Sponsors</a>
-          </li>
-        </ul>
-        <div className="w-96">
-          <h1 className="mb-4 font-semibold text-white uppercase">
-            ABONNEZ-VOUS À NOTRE NEWSLETTER
-          </h1>
-          <p className="font-semibold text-white">
-            Les dernières nouvelles, articles et ressources, envoyés sur votre
-            boîte de réception.
-          </p>
-          <form className="box-border">
-            <input
-              ref={myRef}
-              onClick={focustxt}
-              type="text"
-              placeholder="Enter your email"
-              className="py-2 my-4 pl-2 w-full pr-16 ring-2 outline-none text-white font-semibold focus:ring-blue-600 ring-blue-400 rounded"
-            />
-            <div className="rounded-md shadow">
-              <a
-                href="/"
-                className="w-full flex h-full px-8 justify-center text-center items-center py-3 border border-transparent text-base font-medium rounded-md text-white gradient md:py-4 md:text-lg md:px-10"
-              >
-                Subscribe
-              </a>
-            </div>
-          </form>{" "}
-        </div>
+    <div className="bg-footerbg p-5 sm:p-6 md:p-8 flex items-center justify-center flex-col text-center">
+      <Link to="/">
+        <img src={Logo} className="md:w-46 w-30" alt="" />
+      </Link>
+      <p className="md:max-w-2xl max-w-full mt-4 text-xs sm:text-base lg:text-lg font-semibold text-gray-800">
+        Notre Vision est d’être le principal réseau mondial de jeunes citoyens
+        actifs.
+      </p>
+      <ul className="md:space-x-6 space-x-4 font-semibold text-gray-800 my-6 flex items-center text-xs md:text-base">
+        <li>
+          <a href="#nav-acceuil">Acceuil</a>
+        </li>
+        <li>
+          <a href="#programme">Programme</a>
+        </li>
+        <li>
+          <a href="#team">Equipe</a>
+        </li>
+        <li>
+          <a href="#sponsors">FAQ</a>
+        </li>
+        <li>
+          <a href="#sponsors">Newsletter</a>
+        </li>
+      </ul>
+      <div className="flex space-x-3">
+        <a href="#">
+          <AiFillFacebook className="w-6 h-6 text-gray-800 hover:text-brand delay-50" />
+        </a>
+        <a href="#">
+          <RiInstagramLine className="w-6 h-6 text-gray-800 hover:text-brand" />
+        </a>
       </div>
-      <div className="flex items-center sm:justify-between mx-4 lg:mx-8 flex-wrap mt-32 border-t-2 pt-4 justify-center">
-        <p className="font-bold text-gray-100 sm:text-md text-md">
-          © 2021 All rights reserved.
+      <div className="flex items-center sm:justify-between mx-4 lg:mx-8 flex-wrap my-6 pt-4 justify-center">
+        <p className="font-bold text-gray-800 text-xs xs:text-sm sm:text-md lg:text-lg text-center">
+          © 2021 Tous les droits sont réservés.
         </p>
-        <div className="flex space-x-3">
-          <AiFillFacebook className="w-6 h-6 text-white" />
-          <RiInstagramLine className="w-6 h-6 text-white" />
-        </div>
       </div>
-      <h3 className="text-md font-semibold tracking-wider text-center mt-8 text-white">
-        Made By{" "}
+      <h3 className=" text-sm sm:text-md md:text-lg font-semibold tracking-wider text-center text-gray-800">
+        Réalisé par{" "}
         <a
           target="_blank"
           rel="noreferrer"
           href="https://rayenmehrez.me/"
-          className="text-yellow-600 font-bold"
+          className="text-brand font-bold"
         >
           Rayen Mehrez
         </a>

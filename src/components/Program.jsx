@@ -4,7 +4,7 @@ import img from "../images/programme.png";
 
 const Program = () => {
   return (
-    <div className="bg-gray-100 pt-12 pb-12">
+    <div className="bg-gray-100 pt-12 pb-12" id="program">
       <Title
         title="Programme"
         des1="Projet de programme événementiel"
