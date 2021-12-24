@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
 import {
   Actions,
-  Event,
   EventCounter,
   Footer,
   FrequentQuestions,
   Newsletter,
   Program,
+  Banner,
   Team,
+  VideoModal,
 } from "../components";
-import teamImg from "../images/heroImg.png";
 
 import instagram from "../images/instagram.png";
 import facebook from "../images/facebook.png";
 
 const Homepage = () => {
   const [showButton, setShowButton] = useState(false);
+  const [toggleModal, setToggleModal] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 150) {
+      if (window.pageYOffset > 200) {
         setShowButton(true);
       } else {
         setShowButton(false);
@@ -29,28 +30,21 @@ const Homepage = () => {
 
   return (
     <div className="font-neuton">
-      {/* {clicked && <Dropdown />} */}
       <main className="min-h-screen">
-        <img
-          src={teamImg}
-          alt="banner img"
-          className="w-full h-4/5	 object-cover"
-        />
+        <Banner toggleModal={toggleModal} setToggleModal={setToggleModal} />
         <EventCounter />
-        <Program />
         <Actions />
         <Team />
         <FrequentQuestions />
         <Newsletter />
       </main>
+      {toggleModal ? (
+        <VideoModal toggleModal={toggleModal} setToggleModal={setToggleModal} />
+      ) : null}
       {showButton && (
         <div className="-left-1 top-96 w-10 lg:w-12 space-y-3 lg:space-y-6 fixed rounded-md">
           <div className="relative p-2 z-20">
-            <a
-              href="https://www.facebook.com/JCI.mf.24"
-              target="_blank"
-              rel="_blank"
-            >
+            <a href="https://www.facebook.com/JCI.mf.24" target="_blank">
               <img src={facebook} alt="" className="w-full h-full" />
             </a>
             <a href="https://www.facebook.com/JCI.mf.24">

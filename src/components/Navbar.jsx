@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import img from "../images/logo.png";
 import { FiMenu } from "react-icons/fi";
 import { Link as LinkScroll } from "react-scroll";
+import { RiPhoneFill } from "react-icons/ri";
 
-const Navbar = ({ clicked, setClicked }) => {
+const Navbar = ({ clicked, setClicked, showNav, scrollToTop }) => {
   return (
-    <header className="flex items-center justify-between py-3 px-2 lg:px-6 w-full">
+    <header
+      className={`flex items-center h-18 py-3 shadow-md 
+      } fixed top-0 left-0 z-50  justify-between px-4 lg:px-6 w-full bg-white`}
+    >
       <Link to="/" className="flex items-center cursor-pointer">
         <img
           src={img}
           alt="logo"
-          className="h-18 w-46 object-center object-cover"
+          className="h-full w-46 object-center object-cover"
         />
       </Link>
       <FiMenu
@@ -20,38 +24,29 @@ const Navbar = ({ clicked, setClicked }) => {
       />
       <div className="lg:flex items-center hidden">
         <ul className="lg:flex items-center space-x-12 font-semibold text-gray-600 text-md hidden">
-          <li>
-            <LinkScroll
-              to=""
-              activeClass="active"
-              smooth={true}
-              offset={50}
-              duration={50}
-              className="cursor-pointer"
-            >
-              ACCUEIL
-            </LinkScroll>
-          </li>
-          <li>
-            <LinkScroll
-              to="program"
-              smooth={true}
-              offset={50}
-              duration={500}
-              className="cursor-pointer"
-            >
-              PROGRAMME
-            </LinkScroll>
+          <li onClick={scrollToTop} className="cursor-pointer">
+            Acceuil
           </li>
           <li>
             <LinkScroll
               to="event"
               smooth={true}
               offset={50}
-              duration={500}
+              duration={700}
               className="cursor-pointer"
             >
-              EQUIPE
+              Evenement
+            </LinkScroll>
+          </li>
+          <li>
+            <LinkScroll
+              to="credo"
+              smooth={true}
+              offset={50}
+              duration={700}
+              className="cursor-pointer"
+            >
+              Credo
             </LinkScroll>
           </li>
           <li>
@@ -59,7 +54,18 @@ const Navbar = ({ clicked, setClicked }) => {
               to="team"
               smooth={true}
               offset={50}
-              duration={500}
+              duration={700}
+              className="cursor-pointer"
+            >
+              EQUIPE
+            </LinkScroll>
+          </li>
+          <li>
+            <LinkScroll
+              to="faq"
+              smooth={true}
+              offset={50}
+              duration={700}
               className="cursor-pointer"
             >
               FAQ
@@ -67,21 +73,22 @@ const Navbar = ({ clicked, setClicked }) => {
           </li>
           <li>
             <LinkScroll
-              to="event"
+              to="suggestion"
               smooth={true}
               offset={50}
-              duration={500}
+              duration={700}
               className="cursor-pointer"
             >
-              Newsletter
+              Suggestion
             </LinkScroll>
           </li>
         </ul>
       </div>
       <div className="lg:inline-block hidden">
-        <a href="#" className="btn btn-primary">
-          Contact
-        </a>
+        <div className="flex items-center border px-4 py-2 rounded-full bg-brand text-white font-bold shadow-lg">
+          <RiPhoneFill className="w-5 h-5" />
+          <span> +216 92 481 518</span>
+        </div>
       </div>
     </header>
   );

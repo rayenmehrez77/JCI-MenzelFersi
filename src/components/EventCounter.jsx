@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Timer from "./Timer";
+import Slide from "react-reveal/Slide";
+
 import { ReactComponent as Calender } from "../images/calender.svg";
 
 const Event = () => {
@@ -12,7 +14,7 @@ const Event = () => {
   let interval = useRef();
 
   const starTimer = () => {
-    const countDownDate = new Date("December 22, 2021 00:00:00").getTime();
+    const countDownDate = new Date("Janvier 1, 2022 00:00:00").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -47,27 +49,33 @@ const Event = () => {
   });
 
   return (
-    <div className="p-10 lg:p20 max-w-full">
-      <Calender className="w-20 h-20 lg:w-20 md:h-20 object-cover mx-auto mb-4" />
-      <h1 className="text-md sm:text-xl md:text-2xl lg:text-4xl text-center font-bold space-y-2 tracking-widest">
-        <span className="lg:block">L'ÉVÉNEMENT COMMENCERA DANS</span>
-      </h1>
-      <p className="font-bold mt-4 text-center text-base sm:text-md tracking-wider">
-        {" "}
-        - Samedi 18 December 2021 -{" "}
-      </p>
-      <div className="flex space-x-3 sm:space-x-6 mt-8 justify-center">
-        <Timer type="jours" count={timerDays} />
-        <Timer type="HEURES" count={timerHours} />
-        <Timer type="MINUTES" count={timerMinutes} />
-        <Timer type="SECONDS" count={timerSeconds} />
+    <Slide top cascade>
+      <div className="p-10 lg:p-18 max-w-full bg-gray" id="event">
+        <Calender className="w-20 h-20 lg:w-20 md:h-20 object-cover mx-auto mb-4" />
+        <h1 className="text-sm text-gray-900 sm:text-xl md:text-2xl lg:text-4xl text-center font-bold space-y-2 tracking-widest">
+          <span className="lg:block">L'ÉVÉNEMENT COMMENCERA DANS</span>
+        </h1>
+        <p className="font-extrabold mt-4 text-center text-lg sm:text-xl tracking-wider text-gray-900">
+          {" "}
+          إحــداث نــوادي ثـقافية للأطــفال{" "}
+        </p>
+        <p className="font-extrabold mt-4 text-center text-sm sm:text-md tracking-wider text-gray-900">
+          {" "}
+          - Vendredi 24 December 2021 -{" "}
+        </p>
+        <div className="flex space-x-3 sm:space-x-6 mt-8 justify-center">
+          <Timer type="jours" count={timerDays} />
+          <Timer type="HEURES" count={timerHours} />
+          <Timer type="MINUTES" count={timerMinutes} />
+          <Timer type="SECONDS" count={timerSeconds} />
+        </div>
+        {/* <div className="flex justify-center mt-10">
+          <Link to="/events" className="btn btn-primary animate-bounce">
+            Tout les évènements
+          </Link>
+        </div> */}
       </div>
-      <div className="flex justify-center mt-10">
-        <Link to="/events" className="btn btn-primary animate-bounce">
-          Tout les évènements
-        </Link>
-      </div>
-    </div>
+    </Slide>
   );
 };
 

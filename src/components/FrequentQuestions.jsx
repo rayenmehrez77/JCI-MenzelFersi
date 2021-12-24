@@ -1,5 +1,6 @@
 import React from "react";
 import { Question } from "../components";
+import Fade from "react-reveal/Fade";
 
 const questions = [
   {

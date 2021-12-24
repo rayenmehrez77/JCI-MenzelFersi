@@ -58,9 +58,9 @@ const team = [
 
 const Team = () => {
   return (
-    <div className="py-16 min-h-screen bg-gray-50" id="team">
+    <div className="py-16 min-h-screen bg-gray-light" id="team">
       <Title title="Notre équipe" des1="Les membres bureaux de notre équipe" />
-      <div className="grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 mt-8 p-20 gap-8 max-w-7xl mx-auto ">
+      <div className="grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 mt-8 lg:p-20 p-12 gap-8 max-w-7xl mx-auto ">
         {team.map((member) => (
           <Member key={member.id} {...member} />
         ))}

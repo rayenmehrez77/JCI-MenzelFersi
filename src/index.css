@@ -4,11 +4,15 @@
 
 @layer components {
   .btn {
-    @apply ml-8 cursor-pointer rounded-full py-1 inline-block px-8 transition-all delay-75 font-bold tracking-widest focus:ring focus:ring-offset-2;
+    @apply ml-8 cursor-pointer outline-none py-1 inline-block px-8 transition-all delay-75 font-bold tracking-widest focus:ring focus:ring-offset-2;
   }
 
   .btn-primary {
-    @apply bg-brand text-white hover:bg-brand-light;
+    @apply bg-brand text-white hover:bg-brand-light focus:ring-brand;
+  }
+
+  .btn-secondary {
+    @apply bg-orange text-black;
   }
 
   .gradient {
@@ -45,4 +49,13 @@
     rgb(0, 70, 110) 35%,
     #45b3fc48 100%
   );
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.blur {
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
 }

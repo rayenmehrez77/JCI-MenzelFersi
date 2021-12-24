@@ -1,38 +1,50 @@
 import React from "react";
-import revoir from "../images/revoir.svg";
-import analyse from "../images/space.svg";
-import developer from "../images/thought.svg";
-import executer from "../images/solution.svg";
 import Action from "./Action";
+import { Title } from "../components";
+
+import credo from "../images/credoo.jpg";
 
 const steps = [
   {
+    id: 0,
+    desc: "Que la foi en Dieu donne à la vie son véritable sens",
+  },
+  {
     id: 1,
-    title: "Revoir",
-    desc: "Examiner la communauté Besoins",
-    img: revoir,
+    desc: "Que la fraternité humaine transcende la souveraineté des nations",
   },
   {
     id: 2,
-    title: "ANALYSER",
-    desc: "Surveiller et évaluer Résultats",
-    img: developer,
+    desc: "Que la liberté des individus et de l’entreprise assure mieux la justice économique",
   },
   {
     id: 3,
-    title: "DÉVELOPPER",
-    desc: "Formuler Durable Solutions",
-    img: executer,
+    desc: "Que l’autorité doit s’appuyer sur la loi et non sur l’arbitraire ",
   },
-  { id: 4, title: "EXÉCUTER", desc: "Prendre des mesures", img: analyse },
+  {
+    id: 4,
+    desc: "Que la personne humaine est la plus précieuse des richesses ",
+  },
+  {
+    id: 5,
+    desc: "Et que servir l’humanité constitue l’oeuvre la plus noble d’une vie.",
+  },
 ];
 
 const Actions = () => {
   return (
-    <div className="gradient grid lg:grid-cols-2 grid-cols-1 gap-8 px-20 py-10 lg:p-32 justify-center">
-      {steps.map((step) => (
-        <Action key={step.id} {...step} />
-      ))}
+    <div
+      className="w-full bg-no-repeat bg-cover bg-fixed relative  max-h-2/4 lg:py-18 px-4 lg:px-8 py-16 bg-blend-multiply bg-gray-50 opacity-150"
+      style={{ backgroundImage: `url(${credo})` }}
+      id="credo"
+    >
+      <Title title="Notre Credo" des1="Nous crayons" isWhite />
+      <div className="max-w-6xl mx-auto">
+        {steps.map((step) => (
+          <Action key={step.id} {...step} />
+        ))}
+      </div>
+      <div className="absolute inset-0 bg-black opacity-50"></div>
     </div>
   );
 };
