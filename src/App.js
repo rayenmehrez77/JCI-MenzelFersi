@@ -12,6 +12,17 @@ function App() {
   const [showButton, setShowButton] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  const loadingAsyncCall = async () => {
+    return new Promise((resolve) => setTimeout(() => resolve(), 4000)).then(
+      () => setLoading(false)
+    );
+  };
+
+  useEffect(() => {
+    loadingAsyncCall();
+  }, [loading]);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -39,6 +50,10 @@ function App() {
     });
   };
 
+  if (loading) {
+    return <Spinner />;
+  }
+
   return (
     <div className="font-signika h-screen bg-gray mt-20">
       <div className="gradient top-line absolute top-0 left-0 w-full"></div>
@@ -58,7 +73,7 @@ function App() {
       ) : null}
       <Switch>
         <ErrorBoundary>
-          <Suspense fallback={<Spinner />}>
+          <Suspense fallback={<h1></h1>}>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/events" component={EventsPage} />
           </Suspense>
@@ -69,14 +84,6 @@ function App() {
         appId="439258167812769"
         className="fixed bottom-12 right-6"
       />
-      {showButton && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-6 gradient w-11 h-11 flex items-center justify-center shadow rounded cursor-pointer"
-        >
-          <MdKeyboardArrowUp className="w-8 h-6 text-white animate-bounce" />
-        </button>
-      )}
     </div>
   );
 }

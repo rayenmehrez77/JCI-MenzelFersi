@@ -13,6 +13,7 @@ import {
 
 import instagram from "../images/instagram.png";
 import facebook from "../images/facebook.png";
+import { MdKeyboardArrowUp } from "react-icons/md";
 
 const Homepage = () => {
   const [showButton, setShowButton] = useState(false);
@@ -27,6 +28,14 @@ const Homepage = () => {
       }
     });
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="font-neuton">
@@ -47,19 +56,27 @@ const Homepage = () => {
             <a href="https://www.facebook.com/JCI.mf.24" target="_blank">
               <img src={facebook} alt="" className="w-full h-full" />
             </a>
-            {/* <a href="https://www.facebook.com/JCI.mf.24">
+            <a href="https://www.facebook.com/JCI.mf.24">
               <img
                 src={instagram}
                 target="_blank"
                 alt=""
                 className="w-full h-full mt-2 lg:mt-4"
               />
-            </a> */}
+            </a>
             <span className="absolute p-2 -top-0 -right-2 lg:-top-2 lg:-right-4 bg-red-500 text-xs text-white rounded-full w-6 h-4 lg:w-8 lg:h-6 justify-center flex items-center">
               1.2K
             </span>
           </div>
         </div>
+      )}
+      {showButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-20 right-6 gradient w-11 h-11 z-20 flex items-center justify-center shadow rounded cursor-pointer"
+        >
+          <MdKeyboardArrowUp className="w-8 h-6 text-white animate-bounce" />
+        </button>
       )}
       <Footer />
     </div>
