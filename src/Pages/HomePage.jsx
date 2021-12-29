@@ -5,7 +5,6 @@ import {
   Footer,
   FrequentQuestions,
   Newsletter,
-  Program,
   Banner,
   Team,
   VideoModal,

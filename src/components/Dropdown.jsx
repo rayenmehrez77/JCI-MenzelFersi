@@ -6,7 +6,7 @@ import { RiPhoneFill } from "react-icons/ri";
 const Dropdown = ({ clicked, setClicked, showNav, scrollToTop }) => {
   return (
     <Fade>
-      <ul className="flex lg:hidden flex-col  items-center justify-center  h-screen fixed left-0 top-20  w-full pl-4 border-t space-y-14 bg-gray-50 z-50 font-bold text-gray-700 text-2xl">
+      <ul className="flex lg:hidden flex-col  items-center justify-start pt-10 h-screen fixed left-0 top-20  w-full pl-4 border-t space-y-10 bg-gray-50 z-50 font-bold text-gray-600 text-2xl">
         <li
           onClick={() => {
             scrollToTop();
@@ -77,7 +77,7 @@ const Dropdown = ({ clicked, setClicked, showNav, scrollToTop }) => {
           </LinkScroll>
         </li>
         <div className="inline-block lg:hidden">
-          <div className="flex items-center border px-4 py-2 text-lg rounded-full bg-brand text-white font-bold shadow-lg">
+          <div className="flex items-center border px-4 py-2 text-sm rounded-full bg-brand text-white font-bold shadow-lg">
             <RiPhoneFill className="w-5 h-5" />
             <span> +216 92 481 518</span>
           </div>

@@ -14,15 +14,11 @@ function App() {
   const [clicked, setClicked] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const loadingAsyncCall = async () => {
-    return new Promise((resolve) => setTimeout(() => resolve(), 4000)).then(
-      () => setLoading(false)
-    );
-  };
-
   useEffect(() => {
-    loadingAsyncCall();
-  }, [loading]);
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
