@@ -73,7 +73,7 @@ const Homepage = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-20 right-6 gradient w-11 h-11 z-20 flex items-center justify-center shadow rounded cursor-pointer"
+          className="fixed bottom-24 right-8 gradient w-11 h-11 z-20 flex items-center justify-center shadow rounded cursor-pointer"
         >
           <MdKeyboardArrowUp className="w-8 h-6 text-white animate-bounce" />
         </button>
