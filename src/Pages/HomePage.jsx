@@ -47,14 +47,14 @@ const Homepage = () => {
             <a href="https://www.facebook.com/JCI.mf.24" target="_blank">
               <img src={facebook} alt="" className="w-full h-full" />
             </a>
-            <a href="https://www.facebook.com/JCI.mf.24">
+            {/* <a href="https://www.facebook.com/JCI.mf.24">
               <img
                 src={instagram}
                 target="_blank"
                 alt=""
                 className="w-full h-full mt-2 lg:mt-4"
               />
-            </a>
+            </a> */}
             <span className="absolute p-2 -top-0 -right-2 lg:-top-2 lg:-right-4 bg-red-500 text-xs text-white rounded-full w-6 h-4 lg:w-8 lg:h-6 justify-center flex items-center">
               1.2K
             </span>

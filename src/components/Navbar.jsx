@@ -15,11 +15,11 @@ const Navbar = ({ clicked, setClicked, showNav, scrollToTop }) => {
         <img
           src={img}
           alt="logo"
-          className="h-full w-46 object-center object-cover"
+          className="h-full w-42 -ml-8 object-center object-cover"
         />
       </Link>
       <FiMenu
-        className="w-8 h-8 lg:hidden flex object-cover cursor-pointer"
+        className="w-8 h-8 lg:hidden flex object-cover cursor-pointer text-gray-600"
         onClick={() => setClicked(!clicked)}
       />
       <div className="lg:flex items-center hidden">
@@ -35,7 +35,7 @@ const Navbar = ({ clicked, setClicked, showNav, scrollToTop }) => {
               duration={700}
               className="cursor-pointer"
             >
-              Evenement
+              Événement
             </LinkScroll>
           </li>
           <li>
@@ -57,7 +57,7 @@ const Navbar = ({ clicked, setClicked, showNav, scrollToTop }) => {
               duration={700}
               className="cursor-pointer"
             >
-              EQUIPE
+              Équipe
             </LinkScroll>
           </li>
           <li>

@@ -48,7 +48,14 @@ function App() {
         setClicked={setClicked}
         scrollToTop={scrollToTop}
       />
-      {clicked && <Dropdown />}
+      {clicked ? (
+        <Dropdown
+          showNav={showNav}
+          clicked={clicked}
+          setClicked={setClicked}
+          scrollToTop={scrollToTop}
+        />
+      ) : null}
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
@@ -57,11 +64,11 @@ function App() {
           </Suspense>
         </ErrorBoundary>
       </Switch>
-      {/* <MessengerCustomerChat
-        pageId="100183858854793"
+      <MessengerCustomerChat
+        pageId="107210201631719"
         appId="947531829136147"
         className="fixed bottom-12 right-6"
-      /> */}
+      />
       {showButton && (
         <button
           onClick={scrollToTop}

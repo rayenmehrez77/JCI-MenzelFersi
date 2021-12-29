@@ -14,7 +14,7 @@ const Event = () => {
   let interval = useRef();
 
   const starTimer = () => {
-    const countDownDate = new Date("Janvier 1, 2022 00:00:00").getTime();
+    const countDownDate = new Date("Janvier 15, 2022 00:00:00").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -61,7 +61,7 @@ const Event = () => {
         </p>
         <p className="font-extrabold mt-4 text-center text-sm sm:text-md tracking-wider text-gray-900">
           {" "}
-          - Vendredi 24 December 2021 -{" "}
+          - Samedi 15 Janvier 2022 -{" "}
         </p>
         <div className="flex space-x-3 sm:space-x-6 mt-8 justify-center">
           <Timer type="jours" count={timerDays} />

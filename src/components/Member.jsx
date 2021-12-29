@@ -30,12 +30,12 @@ const Member = ({ img, name, role, InstaLink, fbLink, LinkedInLink, bg }) => {
             ) : null}
             {fbLink ? (
               <a href={fbLink} target="_blank" rel="noreferrer">
-                <FaFacebook className="lg:w-6 lg:h-6  w-4 h-4hover:text-brand" />
+                <FaFacebook className="lg:w-6 lg:h-6  w-4 h-4 hover:text-brand" />
               </a>
             ) : null}
             {InstaLink ? (
               <a href={InstaLink} target="_blank" rel="noreferrer">
-                <AiOutlineInstagram className="lg:w-6 lg:h-6  w-4 h-4hover:text-brand" />
+                <AiOutlineInstagram className="lg:w-6 lg:h-6  w-4 h-4 hover:text-brand" />
               </a>
             ) : null}
           </div>
