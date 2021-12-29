@@ -66,7 +66,7 @@ function App() {
       </Switch>
       <MessengerCustomerChat
         pageId="107210201631719"
-        appId="947531829136147"
+        appId="439258167812769"
         className="fixed bottom-12 right-6"
       />
       {showButton && (
