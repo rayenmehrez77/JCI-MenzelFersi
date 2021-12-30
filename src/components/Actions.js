@@ -34,8 +34,7 @@ const steps = [
 const Actions = () => {
   return (
     <div
-      className="w-full bg-no-repeat bg-cover bg-fixed relative  max-h-2/4 lg:py-18 px-4 lg:px-8 py-16 bg-blend-multiply bg-gray-50 opacity-150"
-      style={{ backgroundImage: `url(${credo})` }}
+      className="w-full bg-no-repeat bg-cover relative  max-h-2/4 lg:py-18 px-4 lg:px-8 py-20 credo"
       id="credo"
     >
       <Title title="Notre Credo" des1="Nous crayons" isWhite />
@@ -44,7 +43,6 @@ const Actions = () => {
           <Action key={step.id} {...step} />
         ))}
       </div>
-      <div className="absolute inset-0 bg-black opacity-50"></div>
     </div>
   );
 };

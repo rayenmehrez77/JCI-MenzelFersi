@@ -77,7 +77,7 @@ const Homepage = () => {
           <MdKeyboardArrowUp className="w-8 h-6 text-white animate-bounce" />
         </button>
       )}
-      <Footer />
+      <Footer scrollToTop={scrollToTop} />
     </div>
   );
 };

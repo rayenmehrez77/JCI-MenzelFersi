@@ -49,7 +49,7 @@ const Event = () => {
   });
 
   return (
-    <div className="p-10 lg:p-18 max-w-full bg-gray" id="event">
+    <div className="px-10 pt-4 pb-12 lg:p-18 max-w-full bg-gray" id="event">
       <Calender className="w-20 h-20 lg:w-20 md:h-20 object-cover mx-auto mb-4" />
       <h1 className="text-sm text-gray-900 sm:text-xl md:text-2xl lg:text-4xl text-center font-bold space-y-2 tracking-widest">
         <span className="lg:block">L'ÉVÉNEMENT COMMENCERA DANS</span>

@@ -151,3 +151,16 @@
       0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
 }
+
+.credo {
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background: #4fb9ff;
+  background: linear-gradient(rgba(1, 39, 65, 0.849), rgba(53, 140, 255, 0.8)),
+    url("./images/credoo.jpg");
+  background: linear-gradient(rgba(1, 39, 65, 0.849), rgba(53, 140, 255, 0.8)),
+    url("./images/credoo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

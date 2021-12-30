@@ -5,8 +5,9 @@ import { AiFillFacebook } from "react-icons/ai";
 import { RiInstagramLine } from "react-icons/ri";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { addEmail } from "../firebase/firebase";
+import { Link as LinkScroll } from "react-scroll";
 
-const Footer = () => {
+const Footer = ({ scrollToTop }) => {
   const [email, setEmail] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -49,7 +50,7 @@ const Footer = () => {
               disabled={!email || successMessage}
               onClick={addEmail}
               type="submit"
-              className="bg-brand h-full hidden md:flex items-center justify-center  rounded-full px-5 text-white outline-none"
+              className="bg-brand h-full hidden md:flex text-sm items-center justify-center  rounded-full px-5 text-white outline-none"
             >
               Subscribe
             </button>
@@ -69,30 +70,73 @@ const Footer = () => {
           {successMessage}
         </h1>
       )}
-      <img src={Logo} className="md:w-46 w-30 mt-6" alt="" />
-      <ul className="md:space-x-6 space-x-4 font-semibold text-gray-800 my-6 flex items-center text-xs md:text-base">
-        <li>
-          <a href="#nav-acceuil">Acceuil</a>
+      <img src={Logo} className="md:w-46 w-30 my-4 sm:py-0 mt-6" alt="" />
+      <ul className="sm:flex items-center hidden sm:space-x-4 lg:space-x-12 font-semibold text-gray-600 text-sm lg:text-md py-6">
+        <li onClick={scrollToTop} className="cursor-pointer">
+          Acceuil
         </li>
         <li>
-          <a href="#programme">Programme</a>
+          <LinkScroll
+            to="event"
+            smooth={true}
+            offset={50}
+            duration={700}
+            className="cursor-pointer"
+          >
+            Événement
+          </LinkScroll>
         </li>
         <li>
-          <a href="#team">Equipe</a>
+          <LinkScroll
+            to="credo"
+            smooth={true}
+            offset={50}
+            duration={700}
+            className="cursor-pointer"
+          >
+            Credo
+          </LinkScroll>
         </li>
         <li>
-          <a href="#sponsors">FAQ</a>
+          <LinkScroll
+            to="team"
+            smooth={true}
+            offset={50}
+            duration={700}
+            className="cursor-pointer"
+          >
+            Équipe
+          </LinkScroll>
         </li>
         <li>
-          <a href="#sponsors">Newsletter</a>
+          <LinkScroll
+            to="faq"
+            smooth={true}
+            offset={50}
+            duration={700}
+            className="cursor-pointer"
+          >
+            FAQ
+          </LinkScroll>
+        </li>
+        <li>
+          <LinkScroll
+            to="suggestion"
+            smooth={true}
+            offset={50}
+            duration={700}
+            className="cursor-pointer"
+          >
+            Suggestion
+          </LinkScroll>
         </li>
       </ul>
       <div className="flex space-x-3">
         <a href="#">
-          <AiFillFacebook className="w-8 h-8 text-gray-800 hover:text-brand transition delay-50" />
+          <AiFillFacebook className="lg:w-8 lg:h-8 w-6 h-6 text-gray-800 hover:text-brand transition delay-50" />
         </a>
         <a href="#">
-          <RiInstagramLine className="w-8 h-8 text-gray-800 hover:text-brand transition delay-50" />
+          <RiInstagramLine className="lg:w-8 lg:h-8 w-6 h-6 text-gray-800 hover:text-brand transition delay-50" />
         </a>
       </div>
       <h3 className=" text-sm sm:text-md md:text-lg font-semibold tracking-wider text-center text-gray-800 mt-4">

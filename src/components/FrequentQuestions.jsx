@@ -65,16 +65,19 @@ const FrequentQuestions = () => {
         </div>
       </div>
       <div className="max-w-full md:mx-auto md:max-w-5xl text-center mt-8 mx-8">
-        <h1 className="text-2xl text-center tracking-wider font-bold text-gray-800 font-josefin">
+        <h1 className="text-2xl text-center tracking-widest font-bold text-gray-800 font-josefin">
           Vous avez encore une question ?
         </h1>
-        <p className="mx-auto my-6 font-semibold text-gray-800">
+        <p className="mx-2 text-sm lg:text-lg my-6 sm:max-w-2xl sm:mx-auto font-semibold text-gray-800 tracking-wider">
           Si vous ne trouvez pas la réponse à votre question dans notre FAQ,
           vous pouvez toujours nous contacter. Nous vous répondrons sous peu.
           Contactez-nous par e-mail à
-          <span className="font-bold block underline text-gray-800">
+          <a
+            href="mailto:someone@yoursite.com?subject=Mail from Our Site"
+            className="font-bold pt-2 block underline text-gray-800"
+          >
             jci.menzelfersi@gmail.com
-          </span>
+          </a>
         </p>
       </div>
     </div>
