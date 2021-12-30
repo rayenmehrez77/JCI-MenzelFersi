@@ -8,7 +8,7 @@ const Banner = ({ setToggleModal, toggleModal }) => {
       <img
         src={teamImg}
         alt="banner img"
-        className="w-full h-4/5 object-center object-cover"
+        className="w-full h-5/6 -mt-1	 object-center object-cover"
       />
       <button
         className="flex w-10 h-10 lg:h-16 lg:w-16 items-center hover:scale-105 hover:bg-brand-light rounded-full justify-center bg-brand absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 "

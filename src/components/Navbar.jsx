@@ -16,7 +16,7 @@ const Navbar = ({ clicked, setClicked, scrollToTop }) => {
         <img
           src={img}
           alt="logo"
-          className="h-full w-52 -ml-8 object-center object-cover"
+          className="h-full w-48  -ml-8 object-center object-cover"
         />
       </Link>
       {clicked ? (
