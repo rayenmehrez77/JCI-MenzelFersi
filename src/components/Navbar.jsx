@@ -94,7 +94,7 @@ const Navbar = ({ clicked, setClicked, scrollToTop }) => {
         </ul>
       </div>
       <div className="lg:inline-block hidden">
-        <div className="flex items-center border px-4 py-2 rounded-full bg-brandtext-white font-bold shadow-lg">
+        <div className="flex items-center border px-4 py-2 rounded-full bg-brand text-white font-bold shadow-lg">
           <RiPhoneFill className="w-5 h-5" />
           <span> +216 92 481 518</span>
         </div>
