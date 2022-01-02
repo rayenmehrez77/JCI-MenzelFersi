@@ -50,7 +50,7 @@ const Homepage = () => {
         <VideoModal toggleModal={toggleModal} setToggleModal={setToggleModal} />
       ) : null}
       {showButton && (
-        <div className="-left-1 top-96 w-10 lg:w-12 space-y-3 lg:space-y-6 fixed rounded-md">
+        <div className="-left-1 top-96 w-12 space-y-3 lg:space-y-6 fixed rounded-md z-10">
           <div className="relative p-2 z-20">
             <a href="https://www.facebook.com/JCI.mf.24" target="_blank">
               <img src={facebook} alt="" className="w-full h-full" />
@@ -63,7 +63,7 @@ const Homepage = () => {
                 className="w-full h-full mt-2 lg:mt-4"
               />
             </a>
-            <span className="absolute p-2 -top-0 -right-2 lg:-top-2 lg:-right-4 bg-red-500 text-xs text-white rounded-full w-6 h-4 lg:w-8 lg:h-6 justify-center flex items-center">
+            <span className="absolute flex-col p-2 flex justify-center items-center -top-4 -right-2 lg:-top-2 lg:-right-4 bg-red-500 text-xs text-white rounded-full w-7 h-7 lg:w-8 lg:h-8">
               1.2K
             </span>
           </div>
