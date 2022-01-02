@@ -5,6 +5,7 @@ import { FiMenu } from "react-icons/fi";
 import { Link as LinkScroll } from "react-scroll";
 import { RiPhoneFill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
+import { Logo } from "../components";
 
 const Navbar = ({ clicked, setClicked, scrollToTop }) => {
   return (
@@ -13,11 +14,7 @@ const Navbar = ({ clicked, setClicked, scrollToTop }) => {
       } fixed top-0 left-0 z-50  justify-between px-4 lg:px-6 w-full bg-white`}
     >
       <Link to="/" className="flex items-center cursor-pointer">
-        <img
-          src={img}
-          alt="logo"
-          className="h-full w-48  -ml-8 object-center object-cover"
-        />
+        <Logo />
       </Link>
       {clicked ? (
         <IoClose

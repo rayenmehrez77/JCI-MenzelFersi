@@ -50,8 +50,8 @@ const Homepage = () => {
         <VideoModal toggleModal={toggleModal} setToggleModal={setToggleModal} />
       ) : null}
       {showButton && (
-        <div className="-left-1 top-96 w-12 space-y-3 lg:space-y-6 fixed rounded-md z-10">
-          <div className="relative p-2 z-20">
+        <div className="-left-1 top-96 w-10 space-y-3 lg:space-y-6 fixed rounded-md ">
+          <div className="relative p-2 z-50">
             <a href="https://www.facebook.com/JCI.mf.24" target="_blank">
               <img src={facebook} alt="" className="w-full h-full" />
             </a>
@@ -72,7 +72,7 @@ const Homepage = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-20 right-8 gradient w-11 h-11 z-20 flex items-center justify-center shadow rounded cursor-pointer"
+          className="fixed bottom-8 right-8 gradient w-11 h-11 z-20 flex items-center justify-center shadow rounded cursor-pointer"
         >
           <MdKeyboardArrowUp className="w-8 h-6 text-white animate-bounce" />
         </button>

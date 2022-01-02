@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Logo from "../images/logo.png";
 import { AiFillFacebook } from "react-icons/ai";
 import { RiInstagramLine } from "react-icons/ri";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { addEmail } from "../firebase/firebase";
 import { Link as LinkScroll } from "react-scroll";
+import { Logo } from "../components";
 
 const Footer = ({ scrollToTop }) => {
   const [email, setEmail] = useState("");
@@ -26,7 +25,7 @@ const Footer = ({ scrollToTop }) => {
     });
   };
   return (
-    <div className="bg-footerbg p-5 sm:p-6 md:p-8 flex items-center justify-center flex-col text-center">
+    <div className="bg-footerbg space-y-4 p-5 sm:p-6 md:p-8 flex items-center justify-center flex-col text-center">
       <div className="">
         <h1 className="lg:text-2xl text-xl font-bold text-gray-700 tracking-wider">
           Recevez nos dernières actualités
@@ -70,7 +69,7 @@ const Footer = ({ scrollToTop }) => {
           {successMessage}
         </h1>
       )}
-      <img src={Logo} className="md:w-46 w-30 my-4 sm:py-0 mt-6" alt="" />
+      <Logo />
       <ul className="sm:flex items-center hidden sm:space-x-4 lg:space-x-12 font-semibold text-gray-600 text-sm lg:text-md py-6">
         <li onClick={scrollToTop} className="cursor-pointer">
           Acceuil

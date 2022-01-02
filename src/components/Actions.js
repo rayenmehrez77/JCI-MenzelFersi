@@ -38,7 +38,7 @@ const Actions = () => {
       id="credo"
     >
       <Title title="Notre Credo" des1="Nous crayons" isWhite />
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto z-0 ">
         {steps.map((step) => (
           <Action key={step.id} {...step} />
         ))}
