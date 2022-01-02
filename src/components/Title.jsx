@@ -4,7 +4,7 @@ const Title = ({ title, des1, des2, isWhite }) => {
   return (
     <>
       <h1
-        className={`text-4xl  uppercase tracking-widest font-bold text-center  ${
+        className={`sm:text-4xl text-3xl uppercase tracking-widest font-bold text-center  ${
           isWhite ? "text-white z-50" : "text-gray-900"
         } `}
       >

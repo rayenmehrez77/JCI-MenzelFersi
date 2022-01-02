@@ -2,8 +2,6 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
 
 import { Dropdown, Navbar, Spinner, ErrorBoundary } from "./components";
-import MessengerCustomerChat from "react-messenger-customer-chat";
-import { MdKeyboardArrowUp } from "react-icons/md";
 
 const HomePage = lazy(() => import("./Pages/HomePage"));
 const EventsPage = lazy(() => import("./Pages/EventsPage"));
@@ -75,11 +73,10 @@ function App() {
           </Suspense>
         </ErrorBoundary>
       </Switch>
-      <MessengerCustomerChat
-        pageId="107210201631719"
-        appId="439258167812769"
-        className="fixed bottom-12 right-6"
-      />
+      {/* <MessengerCustomerChat
+        pageId={process.env.PAGE_ID}
+        appId={process.env.APP_ID}
+      /> */}
     </div>
   );
 }
