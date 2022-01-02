@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../images/logo.png";
 import { FiMenu } from "react-icons/fi";
 import { Link as LinkScroll } from "react-scroll";
 import { RiPhoneFill } from "react-icons/ri";
