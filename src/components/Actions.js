@@ -34,11 +34,11 @@ const steps = [
 const Actions = () => {
   return (
     <div
-      className="w-full bg-no-repeat bg-cover relative  max-h-2/4 lg:py-18 px-4 lg:px-8 py-20 credo"
+      className="w-full mt-10 bg-gray transform -skew-y-2 bg-no-repeat bg-cover relative  max-h-2/4 lg:py-18 px-4 lg:px-8 py-20 credo"
       id="credo"
     >
-      <Title title="Notre Credo" des1="Nous crayons" isWhite />
-      <div className="max-w-6xl mx-auto z-0 ">
+      <Title title="Notre Credo" des1="Nous crayons" isWhite skew />
+      <div className="max-w-6xl mx-auto z-0 transform skew-y-2">
         {steps.map((step) => (
           <Action key={step.id} {...step} />
         ))}

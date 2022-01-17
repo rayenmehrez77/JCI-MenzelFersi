@@ -8,15 +8,28 @@
   }
 
   .btn-primary {
-    @apply bg-brand text-white hover:bg-brand-light focus:ring-brand;
+    @apply bg-brand text-white hover:bg-brand focus:ring-brand;
   }
 
   .btn-secondary {
-    @apply bg-orange text-black;
+    @apply bg-gold text-black;
   }
 
   .gradient {
-    @apply bg-gradient-to-r from-brand-light to-brand-dark;
+    @apply bg-gradient-to-r from-brand to-brand-dark;
+  }
+}
+
+#navlinks {
+  animation: translate 0.5s;
+}
+
+@keyframes translate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -61,7 +74,7 @@
 }
 
 .loader {
-  color: #0bceff;
+  color: #0097d7;
   font-size: 15px;
   margin: 100px auto;
   width: 1em;
@@ -156,10 +169,8 @@
   text-align: center;
   color: white;
   overflow: hidden;
-  background: #4fb9ff;
-  background: linear-gradient(rgba(1, 39, 65, 0.849), rgba(53, 140, 255, 0.8)),
-    url("./images/credoo.jpg");
-  background: linear-gradient(rgba(1, 39, 65, 0.849), rgba(53, 140, 255, 0.8)),
+  background: #17a3df;
+  background: linear-gradient(rgba(58, 103, 177, 0.6), rgba(0, 151, 215, 0.8)),
     url("./images/credoo.jpg");
   background-size: cover;
   background-repeat: no-repeat;

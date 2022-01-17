@@ -39,7 +39,7 @@ const Newsletter = () => {
 
   return (
     <div
-      className=" mt-6 flex  items-center gradient relative overflow-hidden"
+      className=" flex items-center gradient relative overflow-hidden"
       id="suggestion"
     >
       <div className="relative xl:inline-block hidden lg:mr-6 xl:mr-2">

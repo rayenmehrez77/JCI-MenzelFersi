@@ -38,7 +38,7 @@ const Homepage = () => {
 
   return (
     <div className="font-neuton">
-      <main className="min-h-screen">
+      <main className="min-h-screen bg-gray">
         <Banner toggleModal={toggleModal} setToggleModal={setToggleModal} />
         <EventCounter />
         <Actions />
@@ -55,7 +55,10 @@ const Homepage = () => {
             <a href="https://www.facebook.com/JCI.mf.24" target="_blank">
               <img src={facebook} alt="" className="w-full h-full" />
             </a>
-            <a href="https://www.facebook.com/JCI.mf.24">
+            <a
+              href="https://www.instagram.com/jci.menzel_fersi/"
+              target="_blank"
+            >
               <img
                 src={instagram}
                 target="_blank"

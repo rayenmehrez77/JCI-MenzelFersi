@@ -8,8 +8,8 @@ const Question = ({ title, description }) => {
   return (
     <div
       className={`${
-        toggle ? "ring-1 ring-brand" : "border border-white"
-      }border-gray-200 cursor-pointer px-3 lg:px-6 rounded `}
+        toggle ? " ring-1 ring-brand" : "border border-white"
+      }border-gray-200 cursor-pointer px-3  lg:px-6 rounded `}
     >
       <div
         onClick={() => setToggle(!toggle)}
@@ -35,8 +35,8 @@ const Question = ({ title, description }) => {
         )}
       </div>
       {toggle ? (
-        <Fade big>
-          <p className="pb-3 font-semibold text-gray-800 sm:text-sm md:text-base text-xs">
+        <Fade>
+          <p className="pb-3 font-semibold text-gray-600 sm:text-sm md:text-base text-xs">
             {description}
           </p>
         </Fade>

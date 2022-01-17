@@ -73,10 +73,10 @@ const FrequentQuestions = () => {
           vous pouvez toujours nous contacter. Nous vous répondrons sous peu.
           Contactez-nous par e-mail à
           <a
-            href="mailto:someone@yoursite.com?subject=Mail from Our Site"
+            href="mailto:contact@jci-menzel-fersi.tn"
             className="font-bold pt-2 block underline text-gray-800"
           >
-            jci.menzelfersi@gmail.com
+            contact@jci-menzel-fersi.tn
           </a>
         </p>
       </div>

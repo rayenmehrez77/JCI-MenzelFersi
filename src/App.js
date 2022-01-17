@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 2000);
   }, []);
 
   useEffect(() => {
@@ -51,7 +51,6 @@ function App() {
 
   return (
     <div className="font-signika h-screen bg-gray mt-20">
-      <div className="gradient top-line absolute top-0 left-0 w-full"></div>
       <Navbar
         showNav={showNav}
         clicked={clicked}
@@ -74,10 +73,10 @@ function App() {
           </Suspense>
         </ErrorBoundary>
       </Switch>
-      <MessengerCustomerChat
+      {/* <MessengerCustomerChat
         pageId={process.env.PAGE_ID}
         appId={process.env.APP_ID}
-      />
+      /> */}
     </div>
   );
 }

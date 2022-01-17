@@ -49,7 +49,10 @@ const Event = () => {
   });
 
   return (
-    <div className="px-10 pt-4 pb-12 lg:p-18 max-w-full bg-gray" id="event">
+    <div
+      className="px-10 pt-4 pb-12 lg:p-18 max-w-full relative bg-gray"
+      id="event"
+    >
       <Calender className="w-20 h-20 lg:w-20 md:h-20 object-cover mx-auto mb-4" />
       <h1 className="text-sm text-gray-900 sm:text-xl md:text-2xl lg:text-4xl text-center font-bold space-y-2 tracking-widest">
         <span className="lg:block">L'ÉVÉNEMENT COMMENCERA DANS</span>
@@ -63,10 +66,10 @@ const Event = () => {
         - Samedi 15 Janvier 2022 -{" "}
       </p>
       <div className="flex space-x-3 sm:space-x-6 mt-8 justify-center">
-        <Timer type="jours" count={timerDays} />
-        <Timer type="HEURES" count={timerHours} />
-        <Timer type="MINUTES" count={timerMinutes} />
-        <Timer type="SECONDS" count={timerSeconds} />
+        <Timer type="jours" count={timerDays} color="navy" />
+        <Timer type="HEURES" count={timerHours} color="seafoam" />
+        <Timer type="MINUTES" count={timerMinutes} color="gold" />
+        <Timer type="SECONDS" count={timerSeconds} color="aqua" />
       </div>
     </div>
   );

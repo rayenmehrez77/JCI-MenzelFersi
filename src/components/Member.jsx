@@ -4,44 +4,45 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 const Member = ({ img, name, role, InstaLink, fbLink, LinkedInLink, bg }) => {
   return (
-    <div className="flex flex-col w-full items-center text-center relative ">
+    <div className="flex flex-col  w-full items-center">
       <div
-        className={`z-10 bg-gray-light w-full h-full hover:rounded-b-xl hover:translate-x-3 hover:-translate-y-3 relative transition transform cursor-pointer shadow-lg p-4 rounded-sm`}
+        className={`z-10 w-full h-full hover:rounded-b-xl relative transition transform cursor-pointer `}
       >
-        <img
-          src={img}
-          alt="name"
-          className=" rounded-t-lg object-cover h-60 mx-auto"
-        />
-        <div className=" mt-4 flex items-center justify-between">
-          <div className="text-left">
-            <h1 className="lg:text-xl text-blue-800 text-md font-extrabold">
+        <div className="h-60 w-60  mx-auto">
+          <img
+            src={img}
+            alt="name"
+            className="bg-navy object-cover h-full w-full rounded-full hover:scale-50"
+          />
+        </div>
+        <div className="py-4  flex items-center text-center flex-col  transition-all delay-100 rounded space-y-2">
+          <div className="">
+            <h1 className="lg:text-xl text-navy text-md font-extrabold">
               {name}
             </h1>
-            <p className="font-extrabold text-yellow-600 text-sm lg:text-xl tracking-wider">
+            <p className="font-extrabold text-gold text-sm lg:text-xl tracking-wider">
               {role}
             </p>
           </div>
           <div className="flex items-center justify-center space-x-2 text-gray-800">
             {LinkedInLink ? (
               <a href={LinkedInLink} target="_blank" rel="noreferrer">
-                <FaLinkedin className="lg:w-6 lg:h-6 w-4 h-4 hover:text-brand" />
+                <FaLinkedin className="lg:w-6 lg:h-6 w-5 h-5 text-navy" />
               </a>
             ) : null}
             {fbLink ? (
               <a href={fbLink} target="_blank" rel="noreferrer">
-                <FaFacebook className="lg:w-6 lg:h-6  w-4 h-4 hover:text-brand" />
+                <FaFacebook className="lg:w-6 lg:h-6  w-5 h-5 text-navy" />
               </a>
             ) : null}
             {InstaLink ? (
               <a href={InstaLink} target="_blank" rel="noreferrer">
-                <AiOutlineInstagram className="lg:w-6 lg:h-6  w-4 h-4 hover:text-brand" />
+                <AiOutlineInstagram className="lg:w-6 lg:h-6  w-5 h-5 text-navy" />
               </a>
             ) : null}
           </div>
         </div>
       </div>
-      <div className="bg-brand absolute inset-0 w-full h-full rounded-sm"></div>
     </div>
   );
 };

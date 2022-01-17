@@ -9,19 +9,20 @@ module.exports = {
           light: "#F5F5F5",
         },
         brand: {
-          DEFAULT: "#20B4E3",
-          light: "#39A2DB",
-          dark: "#113CFC",
+          DEFAULT: "#0097d7",
+          light: "#17a3df88",
+          dark: "#4267AE",
         },
-        blue: {
-          DEFAULT: "#102D4E",
-        },
-        orange: {
-          DEFAULT: "#FDC400",
-          dark: "#FF4F03",
+        gold: {
+          DEFAULT: "#EDBE38",
         },
         footerbg: "#F1F4F7",
         textLight: "#C7D2FE",
+        navy: "#3A67B1",
+        aqua: "#0097D7",
+        seafoam: "#56BDA3",
+        offBlack: "#0A0F29",
+        black90: "#414042",
       },
       fontFamily: {
         signika: ["Signika Negative", "sans-serif"],
