@@ -4,7 +4,12 @@ import { FiMenu } from "react-icons/fi";
 import { Link as LinkScroll } from "react-scroll";
 import { RiPhoneFill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
-import { Logo } from "../components";
+import { ImgNextGen } from "../components";
+
+import logowebp from "../images/logowbp.webp";
+import logojxr from "../images/logojxr.jxr";
+import logojp2 from "../images/logojp2.jp2";
+import logopng from "../images/logov1.png";
 
 const Navbar = ({ clicked, setClicked, scrollToTop }) => {
   return (
@@ -13,7 +18,14 @@ const Navbar = ({ clicked, setClicked, scrollToTop }) => {
       } fixed top-0 left-0 z-50 justify-between  lg:justify-around px-4 lg:px-6 w-full bg-gray-50`}
     >
       <Link to="/" className="flex items-center cursor-pointer">
-        <Logo className="w-12 h-12" />
+        <ImgNextGen
+          srcWebp={logowebp}
+          srcJrx={logojxr}
+          srcJp2={logojp2}
+          fallback={logopng}
+          alt="Banner image"
+          className="lg:w-32 w-24 mt-2 object-cover "
+        />
       </Link>
       {clicked ? (
         <IoClose

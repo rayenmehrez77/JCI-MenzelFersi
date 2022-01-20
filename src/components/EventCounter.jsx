@@ -50,7 +50,7 @@ const Event = () => {
 
   return (
     <div
-      className="px-10 pt-4 pb-12 lg:p-18 max-w-full relative bg-gray"
+      className="px-10 pt-4 pb-12 lg:p-18 max-w-full relative bg-white"
       id="event"
     >
       <Calender className="w-20 h-20 lg:w-20 md:h-20 object-cover mx-auto mb-4" />

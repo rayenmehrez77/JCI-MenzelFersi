@@ -1,11 +1,9 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
 
-import MessengerCustomerChat from "react-messenger-customer-chat";
+// import MessengerCustomerChat from "react-messenger-customer-chat";
 import { Dropdown, Navbar, Spinner, ErrorBoundary } from "./components";
-
-const HomePage = lazy(() => import("./Pages/HomePage"));
-const EventsPage = lazy(() => import("./Pages/EventsPage"));
+import { HomePage } from "./Pages";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -50,7 +48,7 @@ function App() {
   }
 
   return (
-    <div className="font-signika h-screen bg-gray mt-20">
+    <div className="font-signika h-screen mt-20">
       <Navbar
         showNav={showNav}
         clicked={clicked}
@@ -67,10 +65,7 @@ function App() {
       ) : null}
       <Switch>
         <ErrorBoundary>
-          <Suspense fallback={<h1></h1>}>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/events" component={EventsPage} />
-          </Suspense>
+          <Route exact path="/" component={HomePage} />
         </ErrorBoundary>
       </Switch>
       {/* <MessengerCustomerChat

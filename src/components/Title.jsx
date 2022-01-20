@@ -1,6 +1,6 @@
 import React from "react";
 
-const Title = ({ title, des1, des2, isWhite, skew }) => {
+const Title = ({ title, des1, des2, isWhite, skew, ar }) => {
   return (
     <>
       <h1
@@ -10,20 +10,21 @@ const Title = ({ title, des1, des2, isWhite, skew }) => {
             : "text-gray-900"
         } `}
       >
-        {title}
+        <span>{title} </span>
       </h1>
       <div className="flex flex-col items-center mt-4">
         <div className="w-20 my-1.5 h-0.5 gradient"></div>
         <div className="w-20 h-0.5 ml-16 gradient"></div>
       </div>
       <p className="text-center mt-8 font-bold text-gray-700">
-        <span
+        <h1
           className={`${
             isWhite || skew ? "text-white transform skew-y-2" : ""
           } block`}
         >
-          {des1}
-        </span>
+          <span className="block">{des1}</span>
+          {ar && <span className="block tracking-wider text-lg">{ar}</span>}
+        </h1>
         <span className="block">{des2}</span>
       </p>
     </>

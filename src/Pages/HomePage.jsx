@@ -38,7 +38,7 @@ const Homepage = () => {
 
   return (
     <div className="font-neuton">
-      <main className="min-h-screen bg-gray">
+      <main className="min-h-screen bg-white">
         <Banner toggleModal={toggleModal} setToggleModal={setToggleModal} />
         <EventCounter />
         <Actions />

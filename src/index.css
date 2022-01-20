@@ -169,9 +169,18 @@
   text-align: center;
   color: white;
   overflow: hidden;
-  background: #17a3df;
-  background: linear-gradient(rgba(58, 103, 177, 0.6), rgba(0, 151, 215, 0.8)),
-    url("./images/credoo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background: rgb(44, 44, 170);
+  background: linear-gradient(
+      90deg,
+      rgba(44, 44, 170, 0.733) 0%,
+      rgba(71, 187, 237, 0.692) 50%,
+      rgba(44, 44, 170, 0.733) 100%
+    ),
+    url("./images/webp.webp");
+}
+
+.swiper {
+  display: flex;
 }

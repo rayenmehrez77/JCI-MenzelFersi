@@ -6,7 +6,7 @@ import { RiPhoneFill } from "react-icons/ri";
 const Dropdown = ({ clicked, setClicked, scrollToTop }) => {
   return (
     <Fade>
-      <ul className="flex lg:hidden flex-col bg-opacity-90 pb-6  items-center justify-start pt-8 shadow-xl fixed left-0 top-20  w-full pl-4 border-t space-y-10 bg-gray-100 z-50 font-bold text-gray-600 text-2xl">
+      <ul className="flex lg:hidden uppercase flex-col bg-opacity-90 pb-6  items-center justify-start pt-8 shadow-xl fixed left-0 top-20  w-full pl-4 border-t space-y-10 bg-gray-100 z-50 font-bold text-gray-600 text-2xl">
         <li
           onClick={() => {
             scrollToTop();

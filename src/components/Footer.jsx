@@ -4,7 +4,7 @@ import { RiInstagramLine } from "react-icons/ri";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { addEmail } from "../firebase/firebase";
 import { Link as LinkScroll } from "react-scroll";
-import { Logo } from "../components";
+import logo from "../images/logov1.png";
 
 const Footer = ({ scrollToTop }) => {
   const [email, setEmail] = useState("");
@@ -69,12 +69,12 @@ const Footer = ({ scrollToTop }) => {
           {successMessage}
         </h1>
       )}
-      <Logo />
-      <ul className="sm:flex items-center hidden sm:space-x-4 lg:space-x-12 font-semibold text-gray-600 text-sm lg:text-md py-6">
-        <li onClick={scrollToTop} className="cursor-pointer">
+      <img src={logo} alt="logo" className="lg:w-32 w-24 mt-2 object-cover " />
+      <ul className="sm:flex items-center hidden sm:space-x-4 lg:space-x-12 uppercase font-semibold text-gray-600 text-sm lg:text-md py-6">
+        <li onClick={scrollToTop} className="cursor-pointer hover:text-aqua">
           Acceuil
         </li>
-        <li>
+        <li className="hover:text-aqua">
           <LinkScroll
             to="event"
             smooth={true}
@@ -85,7 +85,7 @@ const Footer = ({ scrollToTop }) => {
             Événement
           </LinkScroll>
         </li>
-        <li>
+        <li className="hover:text-aqua">
           <LinkScroll
             to="credo"
             smooth={true}
@@ -96,7 +96,7 @@ const Footer = ({ scrollToTop }) => {
             Credo
           </LinkScroll>
         </li>
-        <li>
+        <li className="hover:text-aqua">
           <LinkScroll
             to="team"
             smooth={true}
@@ -107,7 +107,7 @@ const Footer = ({ scrollToTop }) => {
             Équipe
           </LinkScroll>
         </li>
-        <li>
+        <li className="hover:text-aqua">
           <LinkScroll
             to="faq"
             smooth={true}
@@ -118,7 +118,7 @@ const Footer = ({ scrollToTop }) => {
             FAQ
           </LinkScroll>
         </li>
-        <li>
+        <li className="hover:text-aqua">
           <LinkScroll
             to="suggestion"
             smooth={true}
@@ -131,10 +131,10 @@ const Footer = ({ scrollToTop }) => {
         </li>
       </ul>
       <div className="flex space-x-3">
-        <a href="#">
+        <a href="https://www.facebook.com/JCI.mf.24">
           <AiFillFacebook className="lg:w-8 lg:h-8 w-6 h-6 text-gray-800 hover:text-brand transition delay-50" />
         </a>
-        <a href="#">
+        <a href="https://www.instagram.com/jci.menzel_fersi/">
           <RiInstagramLine className="lg:w-8 lg:h-8 w-6 h-6 text-gray-800 hover:text-brand transition delay-50" />
         </a>
       </div>

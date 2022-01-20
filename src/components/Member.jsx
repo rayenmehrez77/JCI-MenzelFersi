@@ -4,15 +4,17 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 const Member = ({ img, name, role, InstaLink, fbLink, LinkedInLink, bg }) => {
   return (
-    <div className="flex flex-col  w-full items-center">
+    <div className="flex flex-col  w-full items-center ">
       <div
         className={`z-10 w-full h-full hover:rounded-b-xl relative transition transform cursor-pointer `}
       >
-        <div className="h-60 w-60  mx-auto">
+        <div className="h-56 w-56 rounded-full  mx-auto">
           <img
             src={img}
             alt="name"
-            className="bg-navy object-cover h-full w-full rounded-full hover:scale-50"
+            className=" object-cover rounded-full bg-aqua h-full w-full  hover:scale-50"
+            width="640"
+            height="360"
           />
         </div>
         <div className="py-4  flex items-center text-center flex-col  transition-all delay-100 rounded space-y-2">
