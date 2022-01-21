@@ -1,5 +1,13 @@
 import React from "react";
 import { Title } from "../components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination, Navigation, Scrollbar } from "swiper/core";
+
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/pagination/pagination.min.css";
+
+import "swiper/swiper.min.css";
+import "../swiper.css";
 
 import Member from "./Member";
 import Kacem from "../images/Kacem.png";
@@ -15,6 +23,8 @@ import dhia from "../images/dhia.png";
 import iheb from "../images/iheb.png";
 import oumayma from "../images/oumayma.png";
 import oumaymaM from "../images/oumaymaM.png";
+
+SwiperCore.use([Pagination, Navigation, Scrollbar]);
 
 const advisors = [
   {
@@ -138,11 +148,23 @@ const Team = () => {
       <h1 className="text-center font-bold text-gray-700 mb-12">
         Les conseillères de notre équipe{" "}
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <Swiper
+        spaceBetween={0}
+        pagination
+        navigation
+        scrollbar
+        breakpoints={{
+          640: {
+            slidesPerView: 3,
+          },
+        }}
+      >
         {advisors.map((member) => (
-          <Member key={member.id} {...member} />
+          <SwiperSlide>
+            <Member key={member.id} {...member} />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 };

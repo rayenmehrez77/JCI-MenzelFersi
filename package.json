@@ -24,7 +24,7 @@
     "react-scroll": "^1.8.4",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
-    "swiper": "^7.4.1",
+    "swiper": "6.8",
     "tailwindcss-cli": "^0.1.2",
     "tailwindcss-hero-patterns": "^0.0.1",
     "video-react": "^0.14.1",
