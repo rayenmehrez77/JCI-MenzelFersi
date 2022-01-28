@@ -105,9 +105,13 @@ const Navbar = ({ clicked, setClicked, scrollToTop }) => {
         </ul>
       </div>
       <div className="lg:inline-block hidden">
-        <div className="flex items-center border px-4 py-1.5 text-sm rounded-full bg-brand text-white font-bold shadow-lg">
-          <RiPhoneFill className="w-5 h-5" />
-          <span> +216 92 481 518</span>
+        <div className="flex items-center border px-6 py-2 text-sm lg:text-md rounded-full bg-brand text-white font-bold shadow-lg">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf8d7Z1vuNfh_yucC41WTACsT04L3x4EBx59S-88U3vWYPt0w/viewform"
+            target="_blank"
+          >
+            Inscription
+          </a>
         </div>
       </div>
     </header>

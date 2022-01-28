@@ -23,7 +23,7 @@ const Banner = ({ setToggleModal, toggleModal }) => {
       />
 
       <button
-        className="flex w-10 h-10 lg:h-16 lg:w-16 items-center hover:scale-105 hover:bg-brand-light rounded-full justify-center bg-brand absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 "
+        className="flex w-10 h-10 lg:h-16 lg:w-16 items-center hover:scale-105 hover:bg-brand-light rounded-full justify-center bg-brand absolute top-1/2 left-1/2 transform -translate-x-1/2 "
         onClick={() => setToggleModal(!toggleModal)}
       >
         <div className="animate-ping inline-flex h-full w-full rounded-full bg-sky-400 bg-brand absolute inset-0 duration-75"></div>

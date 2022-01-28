@@ -2,8 +2,6 @@ import React from "react";
 import Action from "./Action";
 import { Title } from "../components";
 
-import credo from "../images/credoo.jpg";
-
 const steps = [
   {
     id: 0,
