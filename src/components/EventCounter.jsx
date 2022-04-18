@@ -55,13 +55,13 @@ const Event = () => {
       <h1 className="text-sm text-gray-900 sm:text-xl md:text-2xl lg:text-4xl text-center font-bold space-y-2 tracking-widest">
         <span className="lg:block">L'ÉVÉNEMENT COMMENCERA DANS</span>
       </h1>
-      <p className="font-extrabold mt-4 text-center text-lg sm:text-2xl tracking-wider text-gray-900">
+      <p className="font-extrabold mt-4 text-center text-lg sm:text-3xl tracking-wider text-gray-900">
         {" "}
         Layeli Ramadhan{" "}
       </p>
       <p className="font-extrabold mt-4 text-center text-sm sm:text-md tracking-wider text-gray-900">
         {" "}
-        - Mercredi 20 Avril 2022 -{" "}
+        - 20 - 21 - 22 - 23 Avril 2022 -{" "}
       </p>
       <div className="flex space-x-3 sm:space-x-6 mt-8 justify-center">
         <Timer type="jours" count={timerDays} color="navy" />
