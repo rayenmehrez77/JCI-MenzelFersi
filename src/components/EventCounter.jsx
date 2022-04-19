@@ -57,7 +57,7 @@ const Event = () => {
       </h1>
       <p className="font-extrabold mt-4 text-center text-lg sm:text-3xl tracking-wider text-gray-900">
         {" "}
-        Layeli Ramadan{" "}
+        Layeli Ramadhan{" "}
       </p>
       <p className="font-extrabold mt-4 text-center text-sm sm:text-md tracking-wider text-gray-900">
         {" "}
